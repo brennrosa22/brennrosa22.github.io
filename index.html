@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tortas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="js/libs/numeral.js/numeral.min.js"></script>
+        <script src="js/libs/bignumber.js/bignumber.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Tortas</h1>
+        </header>
+        <p><em>Tu Pedido.</em></p>
+        <form id="forma" action="javascript:procesa();">
+            <p>
+                <label accesskey="N">
+                    Nombre<br>
+                    <input name="nombre" type="text" autofocus required
+                           pattern=".{1,30}" maxlength="30" size="33"
+                           placeholder="1 a 30 caracteres">
+                </label>
+                <br><output id="salidaNombre"></output>
+            </p>
+            <p>
+                <label accesskey="T">
+                    Teléfono<br>
+                    <input name="telefono" type="tel" pattern="\d{10,14}" maxlength="14"
+                           size="14" placeholder="De 10 a 14 digitos">
+                </label>
+                <br><output id="salidaTelefono"></output>
+            </p>
+        <fieldset>
+                <legend>Menú Tortas</legend>
+                <div>
+                    <label>
+                        <input type="checkbox" accesskey="S" name="tortas"
+                               value="Hawaina" data-precio="40">
+                        Hawaina      $40
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" accesskey="S" name="tortas"
+                               value="Cubana" data-precio="35">
+                        Cubana      $35
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" accesskey="S" name="tortas"
+                               value="Milanesa" data-precio="40">
+                        Milanesa      $40
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" accesskey="S" name="tortas"
+                               value="Pierna" data-precio="45">
+                        Pierna      $45
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" accesskey="S" name="tortas"
+                               value="Española" data-precio="45">
+                        Epañola      $45
+                    </label>
+                </div>
+            </fieldset>
+            <p><b>Seleccionaste:</b> <output id="salidaTortas"></output></p>
+            <p><b>Total a pagar:</b> <output id="salidaPagar"></output></p>
+            <p><input type="submit" value="Procesar"><input type="reset" value="Limpiar"></p>
+        </form>
+        <footer>
+            Copyright <b>Brenda De la Rosa 2020</b>
+        </footer>
+        <script src="js/CtrlSeleccion.js"></script>
+    </body>
+</html>
